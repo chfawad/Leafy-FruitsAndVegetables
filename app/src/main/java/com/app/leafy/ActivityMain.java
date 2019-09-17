@@ -202,10 +202,10 @@ public class ActivityMain extends AppCompatActivity {
                 i = new Intent(this, ActivityShoppingCart.class);
                 startActivity(i);
                 break;
-            case R.id.nav_wish:
+            /*case R.id.nav_wish:
                 i = new Intent(this, ActivityWishlist.class);
                 startActivity(i);
-                break;
+                break;*/
             case R.id.nav_history:
                 i = new Intent(this, ActivityOrderHistory.class);
                 startActivity(i);
@@ -358,8 +358,8 @@ public class ActivityMain extends AppCompatActivity {
         ((TextView) menu.findItem(R.id.nav_cart).getActionView().findViewById(R.id.counter)).setText(String.valueOf(cart_count));
 
         // update wishlist counter
-        int wishlist_count = db.getWishlistSize();
-        ((TextView) menu.findItem(R.id.nav_wish).getActionView().findViewById(R.id.counter)).setText(String.valueOf(wishlist_count));
+       // int wishlist_count = db.getWishlistSize();
+        //((TextView) menu.findItem(R.id.nav_wish).getActionView().findViewById(R.id.counter)).setText(String.valueOf(wishlist_count));
 
         // update notification counter
         int notif_count = db.getUnreadNotificationSize();
